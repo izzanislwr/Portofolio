@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candi Borobudur - Keajaiban Dunia di Jantung Jawa</title>
+    <meta name="description" content="Jelajahi keindahan Candi Borobudur, warisan dunia UNESCO. Temukan sejarah, budaya, dan pengalaman spiritual yang tak terlupakan.">
+    <meta name="keywords" content="Candi Borobudur, wisata Jogja, UNESCO, heritage, Buddhist temple">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .dark .bg-white { background-color: #1f2937; }
+        .dark .text-gray-900 { color: #f9fafb; }
+        .dark .text-gray-600 { color: #d1d5db; }
+        .dark .bg-gray-50 { background-color: #374151; }
+        .dark .border-gray-200 { border-color: #4b5563; }
+        
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .weather-widget {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .testimonial-card {
+            min-height: 200px;
+        }
+        
+        .virtual-tour {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating { animation: float 3s ease-in-out infinite; }
+        
+        .video-overlay {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="font-sans transition-colors duration-300">
+    <!-- Header/Navbar -->
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50 transition-colors duration-300">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dharmachakra text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-800">Borobudur</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-amber-600 transition-colors">Beranda</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-600 transition-colors">Tentang</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-amber-600 transition-colors">Galeri</a>
+                    <a href="#tickets" class="text-gray-700 hover:text-amber-600 transition-colors">Tiket</a>
+                    <a href="#events" class="text-gray-700 hover:text-amber-600 transition-colors">Event</a>
+                    <a href="#blog" class="text-gray-700 hover:text-amber-600 transition-colors">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors">Kontak</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <select id="languageSwitch" class="bg-transparent border border-gray-300 rounded-lg px-3 py-1 text-sm">
+                        <option value="id">🇮🇩 ID</option>
+                        <option value="en">🇺🇸 EN</option>
+                    </select>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                    
+                    <!-- Search -->
+                    <div class="relative">
+                        <input type="text" placeholder="Cari..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    
+                    <!-- Mobile Menu -->
+                    <button id="mobileMenu" class="md:hidden p-2">
+                        <i class="fas fa-bars text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen parallax" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 800%22><defs><linearGradient id=%22bg%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%25%22 stop-color=%22%23667eea%22/><stop offset=%22100%25%22 stop-color=%22%23764ba2%22/></linearGradient></defs><rect width=%221200%22 height=%22800%22 fill=%22url(%23bg)%22/><g opacity=%220.3%22><circle cx=%22200%22 cy=%22200%22 r=%2250%22 fill=%22%23fff%22/><circle cx=%22800%22 cy=%22300%22 r=%2230%22 fill=%22%23fff%22/><circle cx=%22600%22 cy=%22600%22 r=%2240%22 fill=%22%23fff%22/></g></svg>')">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 container mx-auto px-4 h-full flex items-center">
+            <div class="text-white max-w-3xl fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Keajaiban <span class="text-amber-400">Borobudur</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    Jelajahi warisan dunia UNESCO yang memukau di jantung Pulau Jawa
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105">
+                        Mulai Petualangan
+                    </button>
+                    <button id="playVideo" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all">
+                        <i class="fas fa-play mr-2"></i> Tonton Video
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weather Widget -->
+        <div class="absolute top-24 right-4 weather-widget text-white p-4 rounded-lg shadow-lg">
+            <div class="text-center">
+                <i class="fas fa-sun text-2xl mb-2"></i>
+                <div class="text-sm">Magelang</div>
+                <div class="text-2xl font-bold">28°C</div>
+                <div class="text-xs">Cerah</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Counter -->
+    <section class="py-16 bg-gradient-to-r from-amber-500 to-orange-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="counter" data-target="1200000">0</div>
+                    <div class="text-sm uppercase tracking-wide">Pengunjung/Tahun</div>
+                </div>
+                <div class="fade-in">
+                    <div class="counter" data-target="1300">0</div>
+                    <div class="text-sm uppercase tracking-wide">Tahun Sejarah</div>
+                </div>
+                <div class="fade-in">
+                    <div class="counter" data-target="2672">0</div>
+                    <div class="text-sm uppercase tracking-wide">Panel Relief</div>
+                </div>
+                <div class="fade-in">
+                    <div class="counter" data-target="504">0</div>
+                    <div class="text-sm uppercase tracking-wide">Patung Buddha</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Tentang Candi Borobudur</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Candi Borobudur adalah candi Buddha terbesar di dunia dan merupakan salah satu monumen Buddha terbesar di dunia. Dibangun pada abad ke-8 dan ke-9 Masehi selama pemerintahan Dinasti Syailendra, candi ini terdiri dari enam teras berbentuk bujur sangkar yang diatasi oleh tiga pelataran melingkar.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Dengan 2.672 panel relief dan 504 patung Buddha, Borobudur menceritakan kisah perjalanan spiritual menuju pencerahan. Setiap tingkat melambangkan tahapan dalam kosmologi Buddha.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium">UNESCO World Heritage</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Abad ke-8</span>
+                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">Arsitektur Buddha</span>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="w-full h-96 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-2xl overflow-hidden">
+                            <svg viewBox="0 0 400 300" class="w-full h-full">
+                                <defs>
+                                    <linearGradient id="templeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#8B4513"/>
+                                        <stop offset="100%" style="stop-color:#D2691E"/>
+                                    </linearGradient>
+                                </defs>
+                                <!-- Temple silhouette -->
+                                <polygon points="200,50 150,100 150,200 250,200 250,100" fill="url(#templeGrad)"/>
+                                <polygon points="200,50 170,80 170,120 230,120 230,80" fill="#A0522D"/>
+                                <circle cx="200" cy="90" r="15" fill="#8B4513"/>
+                                <!-- Stupas -->
+                                <circle cx="180" cy="140" r="8" fill="#CD853F"/>
+                                <circle cx="220" cy="140" r="8" fill="#CD853F"/>
+                                <circle cx="200" cy="160" r="10" fill="#CD853F"/>
+                                <!-- Background mountains -->
+                                <polygon points="0,180 100,120 200,160 300,100 400,140 400,300 0,300" fill="#4A5568" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center floating">
+                            <i class="fas fa-dharmachakra text-3xl text-amber-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour -->
+    <section class="py-20 virtual-tour">
+        <div class="container mx-auto px-4 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-bold text-white mb-6">Virtual Tour 360°</h2>
+                <p class="text-white/90 mb-8 max-w-2xl mx-auto">
+                    Jelajahi setiap sudut Candi Borobudur dari kenyamanan rumah Anda dengan teknologi virtual reality terdepan
+                </p>
+                <button class="bg-white text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    <i class="fas fa-vr-cardboard mr-2"></i> Mulai Virtual Tour
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Galeri Foto</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Saksikan keindahan Candi Borobudur melalui koleksi foto menakjubkan dari berbagai sudut pandang</p>
+            </div>
+            
+            <!-- Filter Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 fade-in">
+                <button class="filter-btn active bg-amber-500 text-white px-6 py-2 rounded-full" data-filter="all">Semua</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300" data-filter="sunrise">Sunrise</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300" data-filter="architecture">Arsitektur</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300" data-filter="relief">Relief</button>
+                <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300" data-filter="aerial">Aerial</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item fade-in" data-category="sunrise">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center">
+                            <i class="fas fa-sun text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="architecture">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
+                            <i class="fas fa-dharmachakra text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="relief">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-amber-600 to-yellow-700 flex items-center justify-center">
+                            <i class="fas fa-scroll text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="aerial">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
+                            <i class="fas fa-helicopter text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="sunrise">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-mountain text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in" data-category="architecture">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <div class="w-full h-64 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-temple text-6xl text-white/80"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets & Schedule -->
+    <section id="tickets" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Tiket & Jadwal</h2>
+                <p class="text-gray-600">Rencanakan kunjungan Anda dengan informasi tiket dan jadwal terkini</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Regular Ticket -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 fade-in">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-ticket-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Tiket Reguler</h3>
+                        <p class="text-gray-600">Akses standar ke area candi</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-blue-600">Rp 50.000</div>
+                        <div class="text-sm text-gray-500">per orang</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Akses ke area candi
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Audio guide gratis
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Parkir kendaraan
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        Pesan Sekarang
+                    </button>
+                </div>
+                
+                <!-- Sunrise Ticket -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 fade-in border-2 border-amber-400 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-amber-400 text-white px-4 py-1 rounded-full text-sm font-semibold">Populer</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sun text-2xl text-amber-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Tiket Sunrise</h3>
+                        <p class="text-gray-600">Saksikan matahari terbit yang memukau</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-amber-600">Rp 450.000</div>
+                        <div class="text-sm text-gray-500">per orang</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Akses sunrise (05:30)
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Sarapan tradisional
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Pemandu wisata
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Sertifikat kunjungan
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition-colors">
+                        Pesan Sekarang
+                    </button>
+                </div>
+                
+                <!-- VIP Package -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 fade-in">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-crown text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Paket VIP</h3>
+                        <p class="text-gray-600">Pengalaman eksklusif dan premium</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <div class="text-3xl font-bold text-purple-600">Rp 750.000</div>
+                        <div class="text-sm text-gray-500">per orang</div>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Akses prioritas
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Pemandu pribadi
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Makan siang premium
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Transportasi AC
+                        </li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                        Pesan Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Event & Kegiatan</h2>
+                <p class="text-gray-600">Ikuti berbagai acara menarik di sekitar Candi Borobudur</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-calendar mr-2"></i>
+                            15 Mei 2024
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Waisak di Borobudur</h3>
+                        <p class="text-gray-600 mb-4">Perayaan hari raya Waisak dengan prosesi dan doa bersama di Candi Borobudur.</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Selengkapnya →</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-music text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-calendar mr-2"></i>
+                            20-22 Juni 2024
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Festival Musik Tradisional</h3>
+                        <p class="text-gray-600 mb-4">Pertunjukan musik gamelan dan tarian tradisional Jawa di area candi.</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Selengkapnya →</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-camera text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="fas fa-calendar mr-2"></i>
+                            10 Agustus 2024
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Workshop Fotografi</h3>
+                        <p class="text-gray-600 mb-4">Belajar teknik fotografi arsitektur dan landscape bersama fotografer profesional.</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Selengkapnya →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Testimoni Pengunjung</h2>
+                <p class="text-gray-600">Dengarkan pengalaman menakjubkan dari para pengunjung</p>
+            </div>
+            
+            <div class="relative">
+                <div id="testimonialCarousel" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonialSlider">
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 testimonial-card mx-auto max-w-2xl">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                                        AS
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Andi Setiawan</h4>
+                                        <p class="text-gray-600">Jakarta, Indonesia</p>
+                                        <div class="flex text-yellow-400 mt-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic text-lg leading-relaxed">
+                                    "Pengalaman yang luar biasa! Sunrise di Borobudur benar-benar memukau. Pemandu wisata sangat berpengetahuan dan ramah. Pasti akan kembali lagi!"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 testimonial-card mx-auto max-w-2xl">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                                        MR
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Maria Rodriguez</h4>
+                                        <p class="text-gray-600">Barcelona, Spain</p>
+                                        <div class="flex text-yellow-400 mt-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic text-lg leading-relaxed">
+                                    "Amazing temple! The architecture is breathtaking and the spiritual atmosphere is incredible. A must-visit destination in Indonesia!"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-2xl shadow-lg p-8 testimonial-card mx-auto max-w-2xl">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
+                                        RH
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-900">Rini Handayani</h4>
+                                        <p class="text-gray-600">Surabaya, Indonesia</p>
+                                        <div class="flex text-yellow-400 mt-1">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic text-lg leading-relaxed">
+                                    "Virtual tour yang disediakan sangat membantu sebelum berkunjung. Fasilitas lengkap dan pelayanan memuaskan. Terima kasih!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prevTestimonial" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50">
+                    <i class="fas fa-chevron-left text-gray-600"></i>
+                </button>
+                <button id="nextTestimonial" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50">
+                    <i class="fas fa-chevron-right text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Artikel & Blog</h2>
+                <p class="text-gray-600">Baca artikel menarik seputar sejarah, budaya, dan tips berkunjung</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-scroll text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            12 Maret 2024
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user mr-2"></i>
+                            Admin
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sejarah Pembangunan Candi Borobudur</h3>
+                        <p class="text-gray-600 mb-4">Menyelami kisah pembangunan candi Buddha terbesar di dunia yang memakan waktu puluhan tahun...</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-camera text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            8 Maret 2024
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user mr-2"></i>
+                            Fotografer
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tips Fotografi di Borobudur</h3>
+                        <p class="text-gray-600 mb-4">Panduan lengkap untuk mengambil foto terbaik di Candi Borobudur, dari sunrise hingga sunset...</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+                
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-leaf text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fas fa-calendar mr-2"></i>
+                            5 Maret 2024
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-user mr-2"></i>
+                            Guide
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Konservasi dan Pelestarian</h3>
+                        <p class="text-gray-600 mb-4">Upaya pelestarian Candi Borobudur sebagai warisan dunia untuk generasi mendatang...</p>
+                        <button class="text-amber-600 font-semibold hover:text-amber-700">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Integration -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Lokasi & Petunjuk Arah</h2>
+                <p class="text-gray-600">Temukan lokasi Candi Borobudur dan rencanakan perjalanan Anda</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white h-96 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Peta Interaktif</h3>
+                            <p class="text-blue-100">Klik untuk membuka peta lengkap</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Informasi Lokasi</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-amber-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Alamat</h4>
+                                <p class="text-gray-600">Jl. Badrawati, Borobudur, Magelang, Jawa Tengah 56553</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-amber-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Jam Operasional</h4>
+                                <p class="text-gray-600">06:00 - 17:00 WIB (Setiap Hari)</p>
+                                <p class="text-gray-600">Sunrise: 05:30 - 07:00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-car text-amber-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Akses Transportasi</h4>
+                                <p class="text-gray-600">40 km dari Yogyakarta (1 jam berkendara)</p>
+                                <p class="text-gray-600">Bus Trans Jogja tersedia dari Terminal Jombor</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-parking text-amber-500 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Fasilitas Parkir</h4>
+                                <p class="text-gray-600">Parkir luas tersedia untuk mobil dan bus</p>
+                                <p class="text-gray-600">Tarif: Rp 5.000 (motor), Rp 10.000 (mobil)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600">Ada pertanyaan? Kami siap membantu merencanakan kunjungan Anda</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Informasi Kontak</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Telepon</h4>
+                                <p class="text-gray-600">+62 293 788266</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email</h4>
+                                <p class="text-gray-600">info@borobudurpark.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Jam Layanan</h4>
+                                <p class="text-gray-600">08:00 - 17:00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-gray-900 mb-4">Ikuti Kami</h4>
+                        <div class="flex space-x-4">
+                            <button class="w-10 h-10 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-blue-400 text-white rounded-lg hover:bg-blue-500 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="w-10 h-10 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <form class="bg-gray-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Kirim Pesan</h3>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">Nama Depan</label>
+                                <input type="text" id="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Nama Belakang</label>
+                                <input type="text" id="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subjek</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option>Informasi Tiket</option>
+                                <option>Reservasi Grup</option>
+                                <option>Keluhan</option>
+                                <option>Saran</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition-colors font-semibold">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-dharmachakra text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Borobudur</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Jelajahi keajaiban Candi Borobudur, warisan dunia UNESCO yang memukau di jantung Pulau Jawa.</p>
+                    <div class="flex space-x-4">
+                        <button class="w-10 h-10 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="w-10 h-10 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Navigasi</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Tentang</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Galeri</a></li>
+                        <li><a href="#tickets" class="text-gray-400 hover:text-white transition-colors">Tiket</a></li>
+                        <li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Event</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Layanan</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Virtual Tour</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pemandu Wisata</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Reservasi Grup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Paket Wisata</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Fasilitas</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Kontak</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span>Borobudur, Magelang, Jawa Tengah</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+62 293 788266</span>
+                        </div>
+                        <div class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@borobudurpark.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Candi Borobudur. Semua hak dilindungi. Dikembangkan dengan ❤️ untuk pelestarian warisan budaya.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <button id="chatbotToggle" class="bg-amber-500 hover:bg-amber-600 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all transform hover:scale-110">
+            <i class="fas fa-comments text-xl"></i>
+        </button>
+        
+        <div id="chatbotWindow" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-2xl shadow-2xl border">
+            <div class="bg-amber-500 text-white p-4 rounded-t-2xl">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-robot text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Asisten Borobudur</h4>
+                            <p class="text-xs text-amber-100">Online</p>
+                        </div>
+                    </div>
+                    <button id="closeChatbot" class="text-white hover:text-amber-200">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-4 h-64 overflow-y-auto" id="chatMessages">
+                <div class="bg-gray-100 rounded-lg p-3 mb-3">
+                    <p class="text-sm text-gray-700">Halo! Saya asisten virtual Borobudur. Ada yang bisa saya bantu?</p>
+                </div>
+            </div>
+            
+            <div class="p-4 border-t">
+                <div class="flex space-x-2">
+                    <input type="text" id="chatInput" placeholder="Ketik pesan..." class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <button id="sendMessage" class="bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors">
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center video-overlay">
+        <div class="relative max-w-4xl w-full mx-4">
+            <button id="closeVideo" class="absolute -top-12 right-0 text-white text-2xl hover:text-gray-300">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="bg-gray-800 rounded-lg p-8 text-center">
+                <i class="fas fa-play-circle text-6xl text-white mb-4"></i>
+                <h3 class="text-2xl font-bold text-white mb-2">Video Promosi Borobudur</h3>
+                <p class="text-gray-300">Video akan diputar di sini</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const icon = darkModeToggle.querySelector('i');
+            if (body.classList.contains('dark')) {
+                icon.className = 'fas fa-sun text-yellow-400';
+            } else {
+                icon.className = 'fas fa-moon text-gray-600';
+            }
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const increment = target / 100;
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 20);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.counter').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Gallery Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-amber-500', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                button.classList.add('active', 'bg-amber-500', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Testimonial Carousel
+        let currentTestimonial = 0;
+        const testimonialSlider = document.getElementById('testimonialSlider');
+        const totalTestimonials = testimonialSlider.children.length;
+
+        function showTestimonial(index) {
+            const translateX = -index * 100;
+            testimonialSlider.style.transform = `translateX(${translateX}%)`;
+        }
+
+        document.getElementById('nextTestimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+
+        document.getElementById('prevTestimonial').addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Chatbot
+        const chatbotToggle = document.getElementById('chatbotToggle');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const closeChatbot = document.getElementById('closeChatbot');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const sendMessage = document.getElementById('sendMessage');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('hidden');
+        });
+
+        closeChatbot.addEventListener('click', () => {
+            chatbotWindow.classList.add('hidden');
+        });
+
+        function addMessage(message, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `rounded-lg p-3 mb-3 ${isUser ? 'bg-amber-500 text-white ml-8' : 'bg-gray-100 text-gray-700 mr-8'}`;
+            messageDiv.innerHTML = `<p class="text-sm">${message}</p>`;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            const responses = {
+                'halo': 'Halo! Selamat datang di Candi Borobudur. Ada yang bisa saya bantu?',
+                'tiket': 'Tiket reguler Rp 50.000, tiket sunrise Rp 450.000, dan paket VIP Rp 750.000. Mau pesan yang mana?',
+                'jam': 'Candi Borobudur buka setiap hari pukul 06:00-17:00 WIB. Untuk sunrise dimulai pukul 05:30 WIB.',
+                'lokasi': 'Candi Borobudur terletak di Jl. Badrawati, Borobudur, Magelang, Jawa Tengah, sekitar 40 km dari Yogyakarta.',
+                'fasilitas': 'Tersedia parkir, toilet, mushola, restoran, toko souvenir, dan pemandu wisata profesional.',
+                'default': 'Maaf, saya belum memahami pertanyaan Anda. Bisa tanya tentang tiket, jam buka, lokasi, atau fasilitas.'
+            };
+
+            const lowerMessage = message.toLowerCase();
+            for (const key in responses) {
+                if (lowerMessage.includes(key)) {
+                    return responses[key];
+                }
+            }
+            return responses.default;
+        }
+
+        sendMessage.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if (message) {
+                addMessage(message, true);
+                chatInput.value = '';
+                
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response);
+                }, 1000);
+            }
+        });
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage.click();
+            }
+        });
+
+        // Video Modal
+        const playVideo = document.getElementById('playVideo');
+        const videoModal = document.getElementById('videoModal');
+        const closeVideo = document.getElementById('closeVideo');
+
+        playVideo.addEventListener('click', () => {
+            videoModal.classList.remove('hidden');
+        });
+
+        closeVideo.addEventListener('click', () => {
+            videoModal.classList.add('hidden');
+        });
+
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.classList.add('hidden');
+            }
+        });
+
+        // Language Switcher
+        const languageSwitch = document.getElementById('languageSwitch');
+        languageSwitch.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            // Here you would implement language switching logic
+            console.log('Language switched to:', lang);
+        });
+
+        // Contact Form
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!firstName || !lastName || !email || !message) {
+                alert('Mohon lengkapi semua field yang wajib diisi.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Mengirim...';
+            submitButton.disabled = true;
+            
+            setTimeout(() => {
+                submitButton.textContent = 'Pesan Terkirim!';
+                submitButton.classList.remove('bg-amber-600', 'hover:bg-amber-700');
+                submitButton.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                    submitButton.classList.remove('bg-green-600');
+                    submitButton.classList.add('bg-amber-600', 'hover:bg-amber-700');
+                    contactForm.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Menu
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.addEventListener('click', () => {
+            // Mobile menu functionality would be implemented here
+            console.log('Mobile menu clicked');
+        });
+
+        // Initialize animations on page load
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, index * 100);
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98f3ea51747b9fe9',t:'MTc2MDU3OTUzMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
