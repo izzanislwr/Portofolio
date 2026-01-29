@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Izzani Roudhyatussalwa Ridwan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0284c7;
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- 1. Header & Navigasi -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="text-xl font-bold text-sky-700 leading-tight">Izzani Roudhyatussalwa R.</span>
+                <span class="text-xs italic text-slate-500 italic">“Small Steps, Meaningful Impact.”</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-slate-600 hover:text-sky-700">Home</a>
+                <a href="#about" class="nav-link text-slate-600 hover:text-sky-700">About</a>
+                <a href="#portfolio" class="nav-link text-slate-600 hover:text-sky-700">Portofolio</a>
+                <a href="#contact" class="nav-link text-slate-600 hover:text-sky-700">Contact</a>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <div class="md:hidden text-sky-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. Beranda (Home) -->
+    <section id="home" class="hero-gradient pt-32 pb-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <h2 class="text-sky-600 font-semibold tracking-widest uppercase text-sm">Selamat Datang</h2>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                    Izzani Roudhyatussalwa Ridwan
+                </h1>
+                <p class="text-lg text-slate-600 max-w-lg">
+                    Calon Tenaga Kesehatan yang berdedikasi tinggi dengan visi pelayanan humanis.
+                </p>
+                <div class="pt-4">
+                    <a href="#portfolio" class="bg-sky-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-sky-700 transition shadow-lg inline-block">
+                        Lihat Portofolio <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-sky-200 rounded-full blur-xl opacity-50"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full border-8 border-white shadow-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71f1536783?auto=format&fit=crop&q=80&w=500" alt="[Ilustrasi Profesional Keperawatan]" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Tentang Saya (About Me) -->
+    <section id="about" class="py-20 bg-white px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/3">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=500" alt="[Gambar Terkait Kesehatan]" class="rounded-2xl shadow-lg">
+                </div>
+                <div class="md:w-2/3 space-y-6">
+                    <h2 class="text-3xl font-bold text-sky-800">Tentang Saya</h2>
+                    <p class="text-slate-600 leading-relaxed text-justify">
+                        Saya adalah seorang pelajar yang lahir pada tanggal 20 Maret tahun 2008 di Kota Subang. Saya memiliki ketertarikan besar dalam bidang kesehatan, khususnya di jurusan Keperawatan. Saya percaya bahwa ilmu keperawatan memiliki peran penting dalam meningkatkan kualitas hidup masyarakat melalui pelayanan kesehatan yang humanis.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6 pt-4">
+                        <div class="bg-sky-50 p-6 rounded-xl border-l-4 border-sky-500">
+                            <h3 class="font-bold text-sky-900 mb-2 italic">Minat & Tujuan</h3>
+                            <p class="text-sm text-slate-600">Fokus pada pemahaman dasar perawatan pasien, penanganan kebutuhan psikologis, dan pelayanan yang berorientasi keselamatan.</p>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-500">
+                            <h3 class="font-bold text-emerald-900 mb-2 italic">Nilai Pribadi</h3>
+                            <p class="text-sm text-slate-600">Menjunjung tinggi tanggung jawab, ketekunan, dan rasa peduli terhadap sesama sebagai calon perawat profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Keahlian (Skills) -->
+    <section class="py-20 bg-slate-50 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12 text-slate-900">Keahlian Utama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hard Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="text-sky-600 mb-4 text-3xl"><i class="fas fa-stethoscope"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Hard Skills</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>Pemahaman Dasar Kesehatan</li>
+                        <li>Dasar Ilmu Keperawatan</li>
+                        <li>Analisis Materi Kesehatan</li>
+                        <li>Penyusunan Laporan Medis Dasar</li>
+                    </ul>
+                </div>
+                <!-- Soft Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
+                    <div class="text-sky-600 mb-4 text-3xl"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Soft Skills</h3>
+                    <ul class="text-slate-600 space-y-2">
+                        <li>Ketelitian & Disiplin</li>
+                        <li>Tanggung Jawab</li>
+                        <li>Komunikasi Terapeutik</li>
+                        <li>Empati & Kerja Sama Tim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Portofolio -->
+    <section id="portfolio" class="py-20 bg-white px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Portofolio</h2>
+            <div class="max-w-4xl mx-auto bg-slate-50 rounded-3xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800" alt="[Foto Belajar dan Tumbuh]" class="h-full w-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 space-y-4">
+                    <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Personal Project</span>
+                    <h3 class="text-2xl font-bold text-slate-900">Proses Tumbuh, Belajar, dan Tanggung Jawab</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Proyek ini mencerminkan perjalanan saya sebagai pelajar SMAN 1 Subang yang berdedikasi mengejar cita-cita di dunia keperawatan. Mencakup refleksi diri, pengembangan minat, dan komitmen untuk menjadi tenaga kesehatan profesional di masa depan.
+                    </p>
+                    <div class="pt-4 flex items-center text-sky-600 font-semibold cursor-pointer">
+                        Pelajari Lebih Lanjut <i class="fas fa-chevron-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Pengalaman & Prestasi -->
+    <section class="py-20 bg-sky-900 text-white px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fas fa-users-cog mr-3 text-sky-400"></i> Pengalaman Organisasi
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="border-l-2 border-sky-400 pl-6 relative">
+                            <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-1"></div>
+                            <h4 class="font-bold">Seksi Perlengkapan Diklat Pegasus</h4>
+                            <p class="text-sky-200 text-sm">2024</p>
+                        </div>
+                        <div class="border-l-2 border-sky-400 pl-6 relative opacity-80">
+                            <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-1"></div>
+                            <h4 class="font-bold">Anggota Pegasus Astro Club</h4>
+                            <p class="text-sky-200 text-sm">2023 - 2025</p>
+                        </div>
+                        <div class="border-l-2 border-sky-400 pl-6 relative opacity-60">
+                            <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-1"></div>
+                            <h4 class="font-bold">Anggota Ekstrakurikuler KIR</h4>
+                            <p class="text-sky-200 text-sm">2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fas fa-trophy mr-3 text-yellow-400"></i> Prestasi Akademik
+                    </h2>
+                    <div class="bg-sky-800/50 p-6 rounded-2xl border border-sky-700">
+                        <h4 class="text-xl font-bold text-yellow-400">Juara 2 Lomba Science Preneurship</h4>
+                        <p class="text-sky-100 mt-2 italic text-sm">Tahun 2022</p>
+                        <p class="text-slate-300 mt-4 text-sm">
+                            Menunjukkan kemampuan inovasi dalam bidang sains dan kewirausahaan yang mendukung logika berpikir klinis saya.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7 & 8. Kontak & Footer -->
+    <footer id="contact" class="bg-white pt-20">
+        <div class="container mx-auto px-6 text-center pb-12">
+            <h2 class="text-3xl font-bold mb-4">Mari Terhubung</h2>
+            <p class="text-slate-500 mb-8">Saya terbuka untuk diskusi mengenai dunia kesehatan dan kolaborasi pendidikan.</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:izzanislw@gmail.com" class="flex items-center space-x-3 bg-slate-50 px-6 py-3 rounded-full hover:bg-sky-50 transition">
+                    <i class="fas fa-envelope text-sky-600"></i>
+                    <span class="text-slate-700">izzanislw@gmail.com</span>
+                </a>
+                <a href="https://instagram.com/i.zzani" class="flex items-center space-x-3 bg-slate-50 px-6 py-3 rounded-full hover:bg-pink-50 transition">
+                    <i class="fab fa-instagram text-pink-600"></i>
+                    <span class="text-slate-700">@i.zzani</span>
+                </a>
+            </div>
+
+            <div class="border-t border-slate-100 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
+                <p>&copy; Izzani-2026. Hak Cipta Dilindungi.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-sky-600">Privacy Policy</a>
+                    <a href="#" class="hover:text-sky-600">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
